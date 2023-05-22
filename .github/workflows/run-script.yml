@@ -2,8 +2,13 @@ name: run-script
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  cebolla:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: python script.py
+      - run: python script.py -i cebolla_caramelizada
+  pepino:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: python script.py -i pepino
